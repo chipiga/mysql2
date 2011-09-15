@@ -279,7 +279,7 @@ static VALUE rb_mysql_result_fetch_row(VALUE self, ID db_timezone, ID app_timezo
             val = Qnil;
           } else {
             if (month < 1 || day < 1) {
-              rb_raise(cMysql2Error, "Invalid date: %s", row[i]);
+              // rb_raise(cMysql2Error, "Invalid date: %s", row[i]);
               val = Qnil;
             } else {
               if (seconds < MYSQL2_MIN_TIME || seconds > MYSQL2_MAX_TIME) { // use DateTime instead
